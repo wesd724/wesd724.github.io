@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>정규범 페이지</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!------------------------------------------ 구글 광고---------------------------------------->
+
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3446393435211691",
+          enable_page_level_ads: true
+     });
+  </script> -->
+
+  <!---------------------------------------------------------------------------------------------->
+  <link rel="stylesheet" type="text/css" href="./src/css/default.css">
+</head>
+<body>
+
+  <nav class="navbar fixed-top navbar-expand-sm bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">규버미스</a>
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./src/html/link.html">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Game </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./src/game/snake/index.html">snake</a>
+            <a class="dropdown-item" href="./src/game/voidmarble/voidMarble.html">구슬 피하기</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown" style="position: absolute; right: 200px">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">검색 엔진</a>
+            <div class="dropdown-menu">
+              <form class="dropdown-item form-inline" action="http://www.google.com/search" method="GET">
+                <input class="form-control mr-sm-2" name="q" type="text" size="10" placeholder="google">
+                  <button class="btn btn-outline-primary" type="submit">구글 검색</button>
+              </form>
+              <form class="dropdown-item form-inline" action="https://search.naver.com/search.naver" method="GET">
+                <input class="form-control mr-sm-2" name="query" type="text" size="10" placeholder="Search">
+                  <button class="btn btn-outline-success" type="submit">네이버 검색</button>
+              </form>
+            </div>
+        </li>
+      </ul>
+    <!-- <span style="position : absolute; right: 10px;">
+      <form class="form-inline" action="https://search.naver.com/search.naver" method="GET">
+        <input class="form-control mr-sm-2" name="query" type="text" size="10" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">네이버 검색</button>
+      </form>
+    </span>
+    <span style="position: absolute; right: 260px">
+      <form class="form-inline" action="http://www.google.com/search" method="GET">
+        <input class="form-control mr-sm-2" name="q" type="text" size="10" placeholder="Search">
+        <button class="btn btn-outline-light" type="submit">구글 검색</button>
+      </form>
+    </span> -->
+  </nav>
+  <br>
+
+  <div class="jumbotron text-center">
+      <h1>MY PAGE</h1>
+      <p>부트스트랩을 이용한 페이지이다.</p> 
+  </div>   
+  <div style="text-align: center" class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>단계 1</h3>
+        <p>HTML, CSS, Javascript 기초 공부</p>
+        <p>Learning~</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>단계 2</h3>
+        <p>부트스트랩, jQuery 이나 Javascript 중,고급단계 공부</p>
+        <p>Learning~</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>단계 3</h3>        
+        <p>node.js 공부</p>
+        <p>Learning~</p>
+      </div>
+    </div>
+  </div><br><br>
+
+  <div style="text-align: center">
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" onclick="location.href='./src/kbMap/map.html'" class="btn btn-outline-success">success</button>
+  <button type="button" onclick="location.href='./src/html/bookmarks.html'" class="btn btn-outline-info">bookmarks</button>
+  <button type="button" onclick="location.href='./src/html/privacy.html'" class="btn btn-outline-warning">privacy</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+  <button type="button" class="btn btn-outline-dark">Dark</button>
+  <button type="button" class="btn btn-outline-light text-dark">Light</button>
+  </div><br><br>
+
+  <div class="dropdown" style = "text-align: center">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown button </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Link 1</a>
+      <a class="dropdown-item" href="#">Link 2</a>
+      <a class="dropdown-item" href="#">Link 3</a>
+    </div>
+  </div><br>
+
+  <div class="container">
+      <h2 style="margin-left : 30px">웹 프로그래밍 재미도</h2>
+      <div class="progress">
+        <div class="progress-bar" style="width:60%">63%</div>
+      </div>
+  </div><br>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./src/images/2.jpg" alt="Los Angeles">
+        </div>
+        <div class="carousel-item">
+          <img src="./src/images/3.jpg" alt="Chicago">
+        </div>
+        <div class="carousel-item">
+          <img src="./src/images/4.jpg" alt="New York">
+        </div>
+      </div>  
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+  </div>
+
+</body>
+</html>

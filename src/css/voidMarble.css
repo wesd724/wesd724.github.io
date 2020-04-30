@@ -1,0 +1,48 @@
+#mainCanvas {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+
+}
+#outCanvas {
+    background-color:#000;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+} 
+#timerScreen {
+    position: absolute;
+    color: #000;
+    top: 90px;
+    left: 250px;
+}
+#s_go {
+    position: absolute;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    top: 260px;
+    left: 440px;
+}
+#s_exit {
+    position: absolute;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    top: 350px;
+    left: 420px;
+}
+#o_go {
+    position: absolute;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: yellow;
+    top: 260px;
+    left: 400px;
+}
+#o_exit {
+    position: absolute;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    color: yellow;
+    top: 350px;
+    left: 480px;
+}

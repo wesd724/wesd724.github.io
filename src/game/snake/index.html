@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SNAKE</title>
+</head>
+<body>
+    <canvas id="gc" width="400" height="400"></canvas>
+<script>
+    window.onload = function () {
+        canv = document.getElementById("gc");
+        ctx = canv.getContext("2d");
+        document.addEventListener("keydown", keyPush, true);
+        setInterval(game, 1000 / 15);
+    };
+    px = py = 10; // 지렁이 머리 좌표
+    gs = tc = 20; // 타일 크기
+    ax = ay = 13; // 먹이 좌표
+    xv = yv = 0; // 속도
+    trail = [];
+    tail = 1;
+
+    function game() {
+        px += xv;
+        py += yv;
+
+        if (px < 0) {
+            px = tc - 1;
+        } //왼쪽 벽
+        if (px > tc - 1) {
+            px = 0;
+        } // 오른 쪽 벽
+        if (py < 0) {
+            py = tc - 1;
+        }// 위쪽 벽
+        if (py > tc - 1) {
+            py = 0;
+        } // 아래쪽 벽
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, canv.width, canv.height); // 배경그리기
+
+        ctx.fillStyle = "lime";
+        for (var i = 0; i < trail.length; i++) {
+            ctx.fillRect(trail[i].x * gs, trail[i].y * gs, gs - 2, gs - 2);
+            if (trail[i].x == px && trail[i].y == py) { // 지렁이 머리가 자신의 몸에 부딪혔을 때 꼬리값 초기화
+                tail = 3;
+            }
+        } // 지렁이 그리기
+
+        if (ax == px && ay == py) { // 먹이를 먹었을 때
+            tail++;
+            ax = Math.floor(Math.random() * tc);
+            ay = Math.floor(Math.random() * tc);
+        }
+
+        console.log("secondbefore", trail.length, tail); //3 3
+        trail.push({ x: px, y: py }); // 배열 추가
+        console.log("before", trail.length, tail); // 4 3
+        if (trail.length > tail) {
+            trail.shift(); // 배열 첫번쨰 요소 삭제
+        }
+        console.log("after", trail.length, tail); // 3 3
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(ax * gs, ay * gs, gs - 2, gs - 2);
+        // 먹이를 새로운 위치에 갱신
+    }
+
+    function keyPush(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                xv = -1; yv = 0;
+                break;
+            case 38:
+                xv = 0; yv = -1;
+                break;
+            case 39:
+                xv = 1; yv = 0;
+                break;
+            case 40:
+                xv = 0; yv = 1;
+                break;
+        }
+    }
+</script>
+</body>
+</html>
