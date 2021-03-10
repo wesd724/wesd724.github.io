@@ -56,7 +56,7 @@
         console.log("secondbefore", trail.length, tail); //3 3
         trail.push({ x: px, y: py }); // 배열 추가
         console.log("before", trail.length, tail); // 4 3
-        if (trail.length > tail) {
+        while (trail.length > tail) {
             trail.shift(); // 배열 첫번쨰 요소 삭제
         }
         console.log("after", trail.length, tail); // 3 3
